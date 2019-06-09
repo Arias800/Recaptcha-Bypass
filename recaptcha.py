@@ -57,7 +57,7 @@ def ResolveCaptcha(body):
     r = requests.post(urlBase, data='c='+c+responseFinal, headers=headers)
     return re.search('<textarea dir="ltr" readonly>(.+?)<',str(r.text)).group(1)
 
-WebSiteKey = 'Recaptcha's key of the website'
+WebSiteKey = 'Recaptcha\'s key of the website'
 urlBase  = 'https://www.google.com/recaptcha/api/fallback?k='+WebSiteKey
 r = requests.get(urlBase, headers=head)
 
